@@ -120,7 +120,7 @@
                 "height": 80
               },
               "position": {
-                "x": 14,
+                "x": 16,
                 "y": 324
               },
               "angle": 0,
@@ -218,13 +218,23 @@
                 }
               ],
               "z": 8,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "title": "DB stores sensitive data into caching",
+                  "description": "App stores sensitive data into caching, cached data is then returned to final user and he can see sensitive data he should not be able to see",
+                  "mitigation": "Restrict sensitive data acccess with roles and ensure cache stores only needed data according to user and its role."
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -360,7 +370,12 @@
               "target": {
                 "id": "299cc9c6-2a69-4be5-81d7-ec2f20e4a2bc"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 1618,
+                  "y": 519
+                }
+              ],
               "id": "65de55ca-1161-4daf-aaea-8001c8c5d8b8",
               "labels": [
                 {
@@ -461,7 +476,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 14",
+                      "text": "request",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -495,7 +510,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 15",
+                      "text": "request",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -548,14 +563,22 @@
               "target": {
                 "id": "ba8e57a0-211e-47b1-bcc8-c2e8856cc473"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 779,
+                  "y": 330
+                }
+              ],
               "id": "97e2029e-e3eb-4a55-b18d-b8044235564a",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.5308637154355412,
+                    "offset": 0.8086881363480956
+                  },
                   "attrs": {
                     "text": {
-                      "text": "flow 17",
+                      "text": "request",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -589,7 +612,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 18",
+                      "text": "request",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -597,13 +620,23 @@
                 }
               ],
               "z": 23,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "User sends millions of requests",
+                  "type": "Denial of service",
+                  "description": "User sends millions of requests and service goes down",
+                  "mitigation": "restrict nb of request from a given IP?"
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
@@ -668,14 +701,22 @@
               "target": {
                 "id": "7c71a1e8-0d49-4a61-980c-d94f507de314"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 696,
+                  "y": 568
+                }
+              ],
               "id": "2545b74d-5a77-45ec-b3e4-24cbdff653a4",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.43756884037931204,
+                    "offset": -4.088370377543057
+                  },
                   "attrs": {
                     "text": {
-                      "text": "flow 21",
+                      "text": "pages?",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -684,6 +725,7 @@
               ],
               "z": 26,
               "hasOpenThreats": false,
+              "threats": [],
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
@@ -706,10 +748,13 @@
               "id": "1e5ec1ae-98eb-40bf-aadb-53c07fe1d996",
               "labels": [
                 {
-                  "position": 0.5,
+                  "position": {
+                    "distance": 0.4779471912227079,
+                    "offset": 11.82486685435615
+                  },
                   "attrs": {
                     "text": {
-                      "text": "flow 22",
+                      "text": "request",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -769,7 +814,7 @@
                   "position": 0.5,
                   "attrs": {
                     "text": {
-                      "text": "flow 24",
+                      "text": "DNS Lookup",
                       "font-weight": "400",
                       "font-size": "small"
                     }
@@ -817,40 +862,6 @@
               "type": "tm.Flow",
               "smooth": true,
               "source": {
-                "id": "9ed91de0-f2d6-4739-b76f-1a65f77a1db2"
-              },
-              "target": {
-                "id": "290dbbe7-0319-46e7-8181-8541eee4e09a"
-              },
-              "vertices": [],
-              "id": "0efa365a-14a8-49ef-b866-67801812bdd0",
-              "labels": [
-                {
-                  "position": 0.5,
-                  "attrs": {
-                    "text": {
-                      "text": "flow 26",
-                      "font-weight": "400",
-                      "font-size": "small"
-                    }
-                  }
-                }
-              ],
-              "z": 31,
-              "hasOpenThreats": false,
-              "attrs": {
-                ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
-                },
-                ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
-                }
-              }
-            },
-            {
-              "type": "tm.Flow",
-              "smooth": true,
-              "source": {
                 "id": "d444b174-240c-4990-a616-18d0cf722cf2"
               },
               "target": {
@@ -883,13 +894,75 @@
                 }
               ],
               "z": 32,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "title": "User upload unlimited data into DB",
+                  "description": "User upload unlimited data into DB and DB goes down",
+                  "type": "Denial of service",
+                  "mitigation": "Sets limit on what user can store"
+                },
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "title": "Action traces are not linked to any users",
+                  "description": "The action made by the users are not linked to users, hence we cannot proove non-repudiation if a user does something incorrect.",
+                  "mitigation": "Change the DB to have information about who's doing what."
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "id": "9ed91de0-f2d6-4739-b76f-1a65f77a1db2"
+              },
+              "target": {
+                "id": "290dbbe7-0319-46e7-8181-8541eee4e09a"
+              },
+              "vertices": [],
+              "id": "dffff0fe-568b-4bcf-9cbf-e6aae04bbe41",
+              "labels": [
+                {
+                  "position": 0.5,
+                  "attrs": {
+                    "text": {
+                      "text": "Authenticate",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 33,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "User upload unlimited data into DB",
+                  "description": "User upload unlimited data into DB",
+                  "type": "Spoofing",
+                  "mitigation": "-MFA \n- Lock account after x tries"
+                }
+              ],
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             }
