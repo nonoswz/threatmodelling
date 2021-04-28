@@ -586,13 +586,23 @@
                 }
               ],
               "z": 22,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "title": "No Authorization is implemented on sensitive API",
+                  "description": "No Authorization is implemented on sensitive API",
+                  "mitigation": "Implement authorization - RBAC on APIs."
+                }
+              ],
               "attrs": {
                 ".marker-target": {
-                  "class": "marker-target hasNoOpenThreats isInScope"
+                  "class": "marker-target hasOpenThreats isInScope"
                 },
                 ".connection": {
-                  "class": "connection hasNoOpenThreats isInScope"
+                  "class": "connection hasOpenThreats isInScope"
                 }
               }
             },
