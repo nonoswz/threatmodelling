@@ -879,6 +879,10 @@
               },
               "vertices": [
                 {
+                  "x": 1579,
+                  "y": 186
+                },
+                {
                   "x": 1629,
                   "y": 141
                 },
@@ -941,7 +945,12 @@
               "target": {
                 "id": "290dbbe7-0319-46e7-8181-8541eee4e09a"
               },
-              "vertices": [],
+              "vertices": [
+                {
+                  "x": 89,
+                  "y": 223
+                }
+              ],
               "id": "dffff0fe-568b-4bcf-9cbf-e6aae04bbe41",
               "labels": [
                 {
